@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <img src="/static/pic1.jpg" class="d-block w-100" alt="...">
+        <div>  
+        <img width="100%" src= "{{ url_for('static', filename='pic8.JPG') }}"  />
+        </div>
+
+        <div>
+        <img width="100%" src= "{{ url_for('static', filename='pic9.JPG') }}"  />
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

@@ -36,6 +36,7 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -74,16 +75,17 @@ def account():
     return render_template('account.html', title='Account',
                            form=form)
 
-@app.route("/unwrap-project")
+@app.route("/about_us")
 def unwrap_project():
-    noOfItems = getLoginDetails()
-    return render_template("unwrap-project.html", title='The project', noOfItems=noOfItems)
+    return render_template("about_us.html", title='The project')
 
+@app.route("/forgot_pw")
+def forgot_pw():
+    return render_template("forgot_pw.html", title='Forgot Password')
 
-@app.route("/how-it-works")
-def how_it_works():
-     return render_template("how-it-works.html", title='How it works')
-
+@app.route("/all_products")
+def all_products():
+    return render_template("all_products.html", title='All Products')
 
 @app.route("/select_products", methods=['GET', 'POST'])
 def select_products():
